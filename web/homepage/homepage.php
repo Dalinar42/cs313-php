@@ -23,10 +23,17 @@
 
 <div class="row container-fluid">
    <div class="col pt-3 text-center border">About Me</div>
-   <div class="col pt-3 text-center border"></div>
-   <div class="col pt-3 text-center border"></div>
+   <div class="col pt-3 text-center border">Assignments</div>
+   <div class="col pt-3 text-center border">Social Links</div>
+</div>
+<div class="row container-fluid">
+   <div class="col pt-3 text-right border">I have been married for two and a half years. My wife and I have a dog</div>
+   <div class="col pt-3 text-riht border"></div>
+   <div class="col pt-3 text-right border"></div>
+</div>
+<div class="row container-fluid">
+   <div class="col pt-3 text-right border"></div>
 </div>
 
 </body>
-
 </html>
