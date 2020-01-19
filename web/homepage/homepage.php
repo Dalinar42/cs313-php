@@ -9,6 +9,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="homepage.css">
 </head>
 
 <body>
@@ -23,28 +24,38 @@
 
 <div class="row">
    <div class="col text-center">About Me</div>
-   <div class="col text-center">Links</div>
+   <div class="col text-center">Find more information:</div>
    <div class="col text-center">Assignments</div>
 </div>
 
 <div
  class="row p-3">
-   <div class="col p-3">My wife and I have been married for two years and have a beautiful puppy boy named Pinecone.</div>
-   <div class="col">
-
-   </div>
    <div class="col p-3">
-      <a href="../assignments/assignments.php">Assignments</a>
+      <div class="float-left pr-3 pt-2">
+         <img src="../Images/Family and Me/Me.jpg" class="rounded" alt="picture of me">
+      </div>
+      <div class="">
+         My wife and I have been married for two years and have a beautiful puppy boy named Pinecone. I have been studying Software Engineering for three years, now.
+      </div>
    </div>
+   <div class="col text-center p-3">
+      <div class="divHover"><a href="https://www.linkedin.com/in/austin-nelson-030057134/" class="div">LinkedIn</a> Profile </br></div>
+      <div class="divHover"><a href="https://byui.joinhandshake.com/users/12640141">Handshake</a> Profile</div>
+   </div>
+   <div class="col p-3 text-center">
+      <div class="divHover">Follow this <a href="../assignments/assignments.php">link</a> for the Assignments page for CS 313</div>
+   </div>
+
 </div>
 
 <div class="row">
-   <div class="col text-center">
-      <img src="../Images/Family and Me/Me.jpg" class="rounded" alt="picture of me">
-   </div>
+   <div class="col"></div>
    <div class="col"></div>
    <div class="col"></div>
 </div>
 
+<footer>
+   <?php include '../shared/footer.php';?>
+</footer>
 </body>
 </html>

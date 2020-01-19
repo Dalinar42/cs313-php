@@ -1,0 +1,12 @@
+body {
+    background-color: whitesmoke;
+}
+
+.divHover {
+    visibility: visible;
+    color: black;
+}
+
+.divHover:hover {
+    font-weight: bold;
+}
