@@ -15,24 +15,35 @@
 
 <header>
    <?php include '../shared/heading.php';?>
-   <!-- <div class="jumbotron text-center bg-dark text-white">
-      <h1>Austin Nelson</h1>
-      <p>Software Engineering</p>
-   </div> -->
+   <div class="jumbotron text-center bg-dark text-white">
+         <h1>Austin Nelson</h1>
+         <p>Software Engineering</p>
+   </div>
 </header>
 
-<div class="row container-fluid">
-   <div class="col pt-3 text-center border">About Me</div>
-   <div class="col pt-3 text-center border">Assignments</div>
-   <div class="col pt-3 text-center border">Social Links</div>
+<div class="row">
+   <div class="col text-center">About Me</div>
+   <div class="col text-center">Links</div>
+   <div class="col text-center">Assignments</div>
 </div>
-<div class="row container-fluid">
-   <div class="col pt-3 text-right border">I have been married for two and a half years. My wife and I have a dog</div>
-   <div class="col pt-3 text-riht border"></div>
-   <div class="col pt-3 text-right border"></div>
+
+<div
+ class="row p-3">
+   <div class="col p-3">My wife and I have been married for two years and have a beautiful puppy boy named Pinecone.</div>
+   <div class="col">
+
+   </div>
+   <div class="col p-3">
+      <a href="../assignments/assignments.php">Assignments</a>
+   </div>
 </div>
-<div class="row container-fluid">
-   <div class="col pt-3 text-right border"></div>
+
+<div class="row">
+   <div class="col text-center">
+      <img src="../Images/Family and Me/Me.jpg" class="rounded" alt="picture of me">
+   </div>
+   <div class="col"></div>
+   <div class="col"></div>
 </div>
 
 </body>

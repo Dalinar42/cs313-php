@@ -1,4 +1,3 @@
-<div class="jumbotron text-center bg-dark text-white">
-      <h1>Austin Nelson</h1>
-      <p>Software Engineering</p>
+<div class="container-fluid pt-2 text-center bg-secondary">
+   CS 313 Section 01
 </div>
