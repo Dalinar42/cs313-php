@@ -12,7 +12,7 @@
          $_SESSION["favcolor"] = "green";
          $_SESSION["favanimal"] = "dolphin";
          // echo that variables have been set
-         echo "Session variables have been set</b>";
+         echo "Session variables have been set</br>";
       ?>
       <a href="thursdaySession2.php">Check the variables on another page</a>
 
