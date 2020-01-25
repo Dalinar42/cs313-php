@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="../../../index.css"></head>
+<body>
+<header>
+   <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
+      <h1>Shopping Cart</h1>
+      <span>Select your items</span>
+   </div>
+   <?php include '../../shared/menu.php'?>
+</header>
+
+</br>
+
+<form class="container" action="" method="post">
+   <input type="checkbox">This
+</form>
+
+<footer class="footer">
+   <?php include '../../shared/footer.php'?>
+</footer>
+</body>
+</html>

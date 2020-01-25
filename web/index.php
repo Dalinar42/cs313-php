@@ -17,7 +17,7 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
       <h1>Austin Nelson</h1>
-      <p>Software Engineering</p>
+      <span>Software Engineering</span>
    </div>
    <div>
       <?php include 'shared/menu.php' ?>
