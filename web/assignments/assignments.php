@@ -35,6 +35,11 @@
          <td><a href="assign01/shoppingCart.php" class="text-secondary">Shopping Cart</a></td>
          <td>January 25, 2020</td>
       </tr>
+      <tr>
+         <th scope="row">2</th>
+         <td><a href="#" class="text-secondary">Coming Soon</a></td>
+         <td>Coming soon</td>
+      </tr>
    </tbody>
 </table>
 
