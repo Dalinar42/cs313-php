@@ -14,7 +14,7 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
       <h1>Assignments</h1>
-      <span>Coming Soon!</span>
+      <span>All my hard work</span>
    </div>
    <?php include '../shared/menu.php';?>
 </header>
