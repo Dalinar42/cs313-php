@@ -1,6 +1,6 @@
 <?php
    require "dbConnect.php";
-   getDb();
+   $db = getDb();
 
    $family_members = $db->prepare("SELECT * FROM w5_family_members");
    $family_members->execute();
