@@ -35,7 +35,7 @@
       $image = $fRow["image"];
       $id = $fRow['id'];
       echo "<img src=\"$image\" alt=\"$name\">";
-      echo "<h3>$name</h3";
+      echo "<h3>$name</h3>";
    }
 
 
