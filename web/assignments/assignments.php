@@ -16,7 +16,7 @@
       <h1>Assignments</h1>
       <span>All my hard work</span>
    </div>
-   <?php include '../shared/menu.php';?>
+   <?php include '../shared/menu.php'; ?>
 </header>
 
 </br>
@@ -37,8 +37,8 @@
       </tr>
       <tr>
          <th scope="row">2</th>
-         <td><a href="#" class="text-secondary">Coming Soon</a></td>
-         <td>Coming soon</td>
+         <td><a href="../videoGameDB/index.php" class="text-secondary">Project</a></td>
+         <td>2/8/2020</td>
       </tr>
    </tbody>
 </table>

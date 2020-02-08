@@ -1,35 +1,35 @@
 CREATE TABLE users
 ( id          SERIAL        NOT NULL PRIMARY KEY
-, user_name   VARCHAR (50)  NOT NULL
-, first_name  VARCHAR (50)
-, last_name   VARCHAR (50)
+, username   VARCHAR (50)  NOT NULL
+, firstname  VARCHAR (50)
+, lastname   VARCHAR (50)
 , phone       VARCHAR (100)
 , email       VARCHAR (100) NOT NULL
-, info_hidden VARCHAR (1)   NOT NULL
+, infohidden VARCHAR (1)   NOT NULL
 );
 
 CREATE TABLE genres
 ( id          SERIAL        NOT NULL PRIMARY KEY
-, genre_name  VARCHAR (100) NOT NULL
+, genrename  VARCHAR (100) NOT NULL
 );
 
 CREATE TABLE game_list
 ( id          SERIAL        NOT NULL PRIMARY KEY
-, user_id     INT           NOT NULL REFERENCES users(id)
-, game_name   VARCHAR (100) NOT NULL
-, genre_id    int           NOT NULL REFERENCES genres(id)
-, date_added  VARCHAR (100) NOT NULL
+, userid     INT           NOT NULL REFERENCES users(id)
+, gamename   VARCHAR (100) NOT NULL
+, genreid    int           NOT NULL REFERENCES genres(id)
+, dateadded  VARCHAR (100) NOT NULL
 , tags        VARCHAR (100)
 );
 
 CREATE TABLE wish_list
 ( id          SERIAL        NOT NULL PRIMARY KEY
-, user_id     INT           NOT NULL REFERENCES users(id)
-, game_id     INT           NOT NULL REFERENCES game_list(id)
+, userid     INT           NOT NULL REFERENCES users(id)
+, gameid     INT           NOT NULL REFERENCES game_list(id)
 );
 
 CREATE TABLE friends_list
 ( id          SERIAL        NOT NULL PRIMARY KEY
-, user_id     INT           NOT NULL REFERENCES users(id)
-, friend_id   INT           NOT NULL REFERENCES users(id)
+, userid     INT           NOT NULL REFERENCES users(id)
+, friendid   INT           NOT NULL REFERENCES users(id)
 )
