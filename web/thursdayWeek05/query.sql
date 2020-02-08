@@ -57,23 +57,41 @@ GROUP BY p.name
 ORDER BY c DESC
 LIMIT 1 OFFSET 0;
 
--- \echo '5d. Who has competed in the least competitions? How many have they competed in?'
+\echo '5d. Who has competed in the least competitions? How many have they competed in?'
+---------------- Your code here ----------------
+SELECT p.name, COUNT(*) as c FROM w5_event e
+JOIN w5_event_participant ep ON e.id = ep.event_id
+JOIN w5_participant p ON ep.participant_id = p.id
+GROUP BY p.name
+ORDER BY c
+LIMIT 1 OFFSET 0;
+
+\echo '5d. people who have competed in 1 or more'
+---------------- Your code here ----------------
+SELECT p.name, COUNT(*) as c FROM w5_event e
+JOIN w5_event_participant ep ON e.id = ep.event_id
+JOIN w5_participant p ON ep.participant_id = p.id
+WHERE 2 > 0
+GROUP BY p.name
+ORDER BY c;
+
+\echo '5d. - people that didn''t compete in any'
+---------------- Your code here ----------------
+SELECT name FROM w5_participant
+WHERE id NOT IN (SELECT participant_id FROM w5_event_participant)
+ORDER BY name;
+
+\echo '6a. Is there anyone who has competed in the same competition twice? '
 ---------------- Your code here ----------------
 
--- \echo '5d. people who have competed in 1 or more'
+
+\echo '6b. Which event had the most competitors? '
 ---------------- Your code here ----------------
 
--- \echo '5d. - people that didn''t compete in any'
+
+\echo '6c. Which event had the least competitors? '
 ---------------- Your code here ----------------
 
--- \echo '6a. Is there anyone who has competed in the same competition twice? '
----------------- Your code here ----------------
 
--- \echo '6b. Which event had the most competitors? '
----------------- Your code here ----------------
-
--- \echo '6c. Which event had the least competitors? '
----------------- Your code here ----------------
-
--- \echo '6d. List all competitors that competed in the same event at least once '
+\echo '6d. List all competitors that competed in the same event at least once '
 ---------------- Your code here ----------------

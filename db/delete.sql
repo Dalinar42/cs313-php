@@ -1,4 +1,5 @@
-DROP TABLE w4_users;
-DROP TABLE w4_game_list;
-DROP TABLE w4_wish_list;
-DROP TABLE w4_friends_list;
+DROP TABLE IF EXISTS friends_list;
+DROP TABLE IF EXISTS wish_list;
+DROP TABLE IF EXISTS game_list;
+DROP TABLE IF EXISTS genres;
+DROP TABLE IF EXISTS users;
