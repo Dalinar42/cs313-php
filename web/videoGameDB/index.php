@@ -17,8 +17,8 @@
    $db = getDb();
 ?>
    <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
-      <h1>Assignments</h1>
-      <span>All my hard work</span>
+      <h1>Database Assignment</h1>
+      <span>Display the database of games</span>
    </div>
    <?php include '../shared/menu.php'; ?>
 </header>
