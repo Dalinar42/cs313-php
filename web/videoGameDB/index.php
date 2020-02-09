@@ -37,9 +37,9 @@
          $event->execute();
          while ($fRow = $event->fetch(PDO::FETCH_ASSOC))
          {
-            $game_name = $fRow["game_name"];
+            $gamename = $fRow["gamename"];
             $id = $fRow['id'];
-            echo "<tr><td>$id</td><td>$game_name</td></tr>";
+            echo "<tr><td>$id</td><td>$gamename</td></tr>";
          }
       ?>
    </tbody>
