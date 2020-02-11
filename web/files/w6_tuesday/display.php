@@ -22,8 +22,9 @@
                $fstatement->execute();
                while ($frow = $fstatement0<fetch(PDO::FETCH_ASSOC))
                {
-                  $food = $frow['food'];
+                  $ffood = $frow['food'];
                }
+               echo "<h1>$first $last's favorite food is $ffood</h1>";
             }
             // execute another query to get food data
             // display name and favorite food
