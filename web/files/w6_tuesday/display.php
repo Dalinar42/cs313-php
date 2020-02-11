@@ -11,7 +11,7 @@
             $statement = $db->prepare('SELECT * FROM w6_user WHERE ID = :personId');
             $statement->bindvalue(':personId', $personId);
             $statement->execute();
-            while ($row = $statement0<fetch(PDO::FETCH_ASSOC))
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                $id = $row['id'];
                $first = $row['first_name'];
