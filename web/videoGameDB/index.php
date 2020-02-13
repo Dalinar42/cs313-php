@@ -16,11 +16,7 @@
    require 'dbConnect.php';
    $db = getDb();
 ?>
-   <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
-      <h1>Database Assignment</h1>
-      <span>Display the database of games</span>
-   </div>
-   <?php include '../shared/menu.php'; ?>
+
 </header>
 
 
