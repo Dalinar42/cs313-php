@@ -3,6 +3,7 @@ CREATE TABLE users
 , username    VARCHAR (50)  NOT NULL
 , firstname   VARCHAR (50)
 , lastname    VARCHAR (50)
+, PASSWORD    VARCHAR (50)
 , phone       VARCHAR (100)
 , email       VARCHAR (100) NOT NULL
 , infohidden  VARCHAR (1)   NOT NULL
