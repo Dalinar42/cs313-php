@@ -28,8 +28,8 @@ CREATE TABLE wish_list
 , gameid      INT           NOT NULL REFERENCES game_list(id)
 );
 
-CREATE TABLE friends_list
-( id          SERIAL        NOT NULL PRIMARY KEY
-, userid      INT           NOT NULL REFERENCES users(id)
-, friendid    INT           NOT NULL REFERENCES users(id)
-)
+-- CREATE TABLE friends_list
+-- ( id          SERIAL        NOT NULL PRIMARY KEY
+-- , userid      INT           NOT NULL REFERENCES users(id)
+-- , friendid    INT           NOT NULL REFERENCES users(id)
+-- )
