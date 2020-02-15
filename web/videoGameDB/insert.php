@@ -4,24 +4,24 @@ session_start();
 // INSERT INTO game_list ( gamename, genreid, userid, dateadded)
 // 	VALUES ( 'StarCraft', 1, 1, '2/8/2020' );
 $gname = $_POST['gamename'];
-$grid = $_POST['genreid'];
+$gsId = $_POST['genreid'];
 $id = $_SESSION['userid'];
-$dateadd = date("m/d/Y");
+$datetoday = date("m/d/Y");
 // echo "Game name: " . $gname;
-// echo " Genre Id: " . $grid;
+// echo " Genre Id: " . $gsId;
 // echo " User Id: " . $id;
-// echo " Date Added: " . $dateadd;
+// echo " Date Added: " . $datetoday;
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gname, :grid, :id, :dateadd)';
+	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gname, :gsId, :id, :datetoday)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':gname', $gname);
-	$statement->bindValue(':grid', $grid);
+	$statement->bindValue(':gsId', $gsId);
 	$statement->bindValue(':id', $id);
-	$statement->bindValue(':dateadd', $dateadd);
+	$statement->bindValue(':datetoday', $datetoday);
 	$statement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
