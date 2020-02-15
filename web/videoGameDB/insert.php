@@ -5,22 +5,22 @@ session_start();
 // 	VALUES ( 'StarCraft', 1, 1, '2/8/2020' );
 $gamename = $_POST['gamename'];
 $genreid = $_POST['genreid'];
-$userIdSession = $_SESSION['userId'];
+$id = $_SESSION['userid'];
 $dateadded = date("m/d/Y");
 echo "Game name: " . $gamename;
 echo " Genre Id: " . $genreid;
-echo " User Id: " . $userIdSession;
+echo " User Id: " . $id;
 echo "Date Added: " . $dateadded;
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO game_list ( gamename, genreid, userIdSession, dateadded) VALUES (:gamename, :genreid, :userIdSession, :dateadded)';
+	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gamename, :genreid, :id, :dateadded)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':gamename', $gamename);
 	$statement->bindValue(':genreid', $genreid);
-	$statement->bindValue(':userIdSession', $userIdSession);
+	$statement->bindValue(':id', $id);
 	$statement->bindValue(':dateadded', $dateadded);
 	$statement->execute();
 
