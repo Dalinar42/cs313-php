@@ -36,7 +36,7 @@
    <tbody>
       <?php
          $id = $_SESSION['userid'];
-         $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename FROM game_list g JOIN users u ON u.id = g.userid WHERE u.id = id");
+         $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename FROM game_list g JOIN users u ON u.id = g.userid WHERE u.id = $id");
          $listGames->execute();
          while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
          {
