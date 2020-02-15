@@ -7,10 +7,10 @@ $gname = $_POST['gamename'];
 $grid = $_POST['genreid'];
 $id = $_SESSION['userid'];
 $dateadd = date("m/d/Y");
-echo "Game name: " . $gname;
-echo " Genre Id: " . $grid;
-echo " User Id: " . $id;
-echo " Date Added: " . $dateadd;
+// echo "Game name: " . $gname;
+// echo " Genre Id: " . $grid;
+// echo " User Id: " . $id;
+// echo " Date Added: " . $dateadd;
 require("dbConnect.php");
 $db = get_db();
 
