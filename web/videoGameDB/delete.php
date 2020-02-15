@@ -21,33 +21,29 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <!-- I want to be able to greet them by username -->
-      <h1>Add a Game</h1>
+      <h1>Remove a Game</h1>
+      <h3>Select a game to remove</h3>
    </div>
 </header>
 
 <div class="container">
-<form action="insert.php" method="post">
-   <div class="row">
-      <div class="col">
-         <input type="text" class="form-control" placeholder="Game Name" name="gamename">
-      </div>
+<form action="remove.php" method="post">
 
    <div class="col">
       <select id="genre" class="form-control" name="genreid">
          <?php
-            $statement = $db->prepare("SELECT * FROM genres");
+            $statement = $db->prepare("SELECT * FROM game_list");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                $id   = $row['id'];
-               $genrename = $row['genrename'];
-               echo "<option value='$id'>$genrename</option>";
+               $gamename = $row['gamename'];
+               echo "<option value='$id'>$gamename</option>";
             }
             ?>
       </select>
    </div>
-   </div>
-   <input class="btn purple-gradient" type="submit" style="float:left" value="Add">
+   <input class="btn purple-gradient" type="submit" style="float:left" value="Remove">
 </form>
 
 <form action="profile.php">
