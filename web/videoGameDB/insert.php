@@ -5,7 +5,7 @@ session_start();
 // 	VALUES ( 'StarCraft', 1, 1, '2/8/2020' );
 $gamename = $_POST['gamename'];
 $genreid = $_POST['genreid'];
-$userId = $_SESSION['userId'];
+$userIdSession = $_SESSION['userId'];
 $dateadded = date("Y/m/d");
 
 require("dbConnect.php");
@@ -13,11 +13,11 @@ $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gamename, :genreid, :userId, :dateadded )';
+	$query = 'INSERT INTO game_list ( gamename, genreid, userIdSession, dateadded) VALUES (:gamename, :genreid, :userIdSession, :dateadded)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':gamename', $gamename);
 	$statement->bindValue(':genreid', $genreid);
-	$statement->bindValue(':userId', $userId);
+	$statement->bindValue(':userIdSession', $userIdSession);
 	$statement->bindValue(':dateadded', $dateadded);
 	$statement->execute();
 
@@ -32,5 +32,6 @@ catch (Exception $ex)
 }
 // header("Location: display.php/?personId=$userid");
 header("Location: profile.php");
+
 die();
 ?>
