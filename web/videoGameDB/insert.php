@@ -1,21 +1,24 @@
 <?php
 session_start();
 
-
-$first = $_POST['first'];
-$last = $_POST['last'];
-$food = $_POST['food'];
+// INSERT INTO game_list ( gamename, genreid, userid, dateadded)
+// 	VALUES ( 'StarCraft', 1, 1, '2/8/2020' );
+$gamename = $_POST['gamename'];
+$genreid = $_POST['genreid'];
+$userId = $_SESSION['userId'];
+$dateadded = date("Y/m/d");
 
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO w6_user (first_name, last_name, food_type) VALUES (:first, :last, :food)';
+	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gamename, :genreid, :userId, :dateadded )';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':first', $first);
-	$statement->bindValue(':last', $last);
-	$statement->bindValue(':food', $food);
+	$statement->bindValue(':gamename', $gamename);
+	$statement->bindValue(':genreid', $genreid);
+	$statement->bindValue(':userId', $userId);
+	$statement->bindValue(':dateadded', $dateadded);
 	$statement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences

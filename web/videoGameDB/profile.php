@@ -19,45 +19,48 @@
 </head>
 <body>
 <header>
-   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
+   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white">
       <!-- I want to be able to greet them by username -->
       <h1>Hello, </h1>
-      <h3>Welcome to your homepage</h3>
+      <h3>Welcome to your game list</h3>
    </div>
 </header>
 
-<table class="table table-bordered container mb-5">
-   <thead class="thead-dark">
-      <tr>
-         <th scope="col">ID</th>
-         <th scope="col">Name</th>
-         <th scope="col">Genre</th>
-      </tr>
-   </thead>
-   <tbody>
-      <?php
-         $id = $_SESSION['userid'];
-         $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename, gn.genrename FROM game_list g
-                                    JOIN users u ON u.id = g.userid
-                                    JOIN genres gn ON gn.id = g.genreid
-                                    WHERE u.id = $id;
-                                    ");
-         $listGames->execute();
-         while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
-         {
-            $gamename = $fRow["gamename"];
-            $id = $fRow['id'];
-            $genrename = $fRow["genrename"];
+<div class="container">
+   <table class="table table-bordered mb-5">
+      <thead class="thead-dark">
+         <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Genre</th>
+         </tr>
+      </thead>
+      <tbody>
+         <?php
+            $id = $_SESSION['userid'];
+            $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename, gn.genrename, g.dateadded FROM game_list g
+                                       JOIN users u ON u.id = g.userid
+                                       JOIN genres gn ON gn.id = g.genreid
+                                       WHERE u.id = $id;
+                                       ");
+            $listGames->execute();
+            while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
+            {
+               $gamename = $fRow["gamename"];
+               $id = $fRow['id'];
+               $genrename = $fRow["genrename"];
+               $dateadded = $fRow["dateadded"];
 
-            echo "<tr><td>$id</td><td>$gamename</td><td>$genrename</td></tr>";
-         }
-      ?>
-   </tbody>
-</table>
+               echo "<tr><td>$id</td><td>$gamename</td><td>$genrename</td><td>$dateadded</td></tr>";
+            }
+         ?>
+      </tbody>
+   </table>
 
-<form action="addGame.php">
-   <input type="submit" class="btn blue-gradient" value="Add Game">
-</form>
+   <form action="addGame.php">
+      <input type="submit" class="btn blue-gradient" value="Add Game">
+   </form>
+</div>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>

@@ -26,14 +26,14 @@
 </header>
 
 <div class="container">
-<form action="insert.php">
+<form action="insert.php" method="post">
    <div class="row">
       <div class="col">
          <input type="text" class="form-control" placeholder="Game Name" name="gamename">
       </div>
 
    <div class="col">
-      <select id="inputFood" class="form-control" name="genre">
+      <select id="genre" class="form-control" name="genreid">
          <?php
             $statement = $db->prepare("SELECT * FROM genres");
             $statement->execute();
