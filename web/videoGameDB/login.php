@@ -41,7 +41,7 @@
             </div>
 
             <div class="col">
-               <button type="submit" class="btn btn-primary">Submit</button>
+               <button type="submit" class="btn blue-gradient">Submit</button>
             </div>
          </div>
       </form>
