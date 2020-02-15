@@ -6,6 +6,7 @@ CREATE TABLE users
 , phone       VARCHAR (100)
 , email       VARCHAR (100) NOT NULL
 , infohidden  BOOLEAN       NOT NULL
+-- , PASSWORD    VARCHAR (59)  NOT NULL
 );
 
 CREATE TABLE genres
@@ -19,7 +20,7 @@ CREATE TABLE game_list
 , gamename    VARCHAR (100) NOT NULL
 , genreid     int           NOT NULL REFERENCES genres(id)
 , dateadded   VARCHAR (100) NOT NULL
-, tags        VARCHAR (100)
+, tags        VARCHAR (100) -- stretch
 );
 
 CREATE TABLE wish_list
@@ -28,6 +29,7 @@ CREATE TABLE wish_list
 , gameid      INT           NOT NULL REFERENCES game_list(id)
 );
 
+-- stretch
 -- CREATE TABLE friends_list
 -- ( id          SERIAL        NOT NULL PRIMARY KEY
 -- , userid      INT           NOT NULL REFERENCES users(id)

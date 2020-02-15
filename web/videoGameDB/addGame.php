@@ -21,46 +21,40 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <!-- I want to be able to greet them by username -->
-      <h1>Hello, </h1>
-      <h3>Welcome to your homepage</h3>
+      <h1>Add a Game</h1>
    </div>
 </header>
 
-<table class="table table-bordered container mb-5">
-   <thead class="thead-dark">
-      <tr>
-         <th scope="col">ID</th>
-         <th scope="col">Name</th>
-         <th scope="col">Genre</th>
-      </tr>
-   </thead>
-   <tbody>
-      <?php
-         $id = $_SESSION['userid'];
-         $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename, gn.genrename FROM game_list g
-                                    JOIN users u ON u.id = g.userid
-                                    JOIN genres gn ON gn.id = g.genreid
-                                    WHERE u.id = $id;
-                                    ");
-         $listGames->execute();
-         while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
-         {
-            $gamename = $fRow["gamename"];
-            $id = $fRow['id'];
-            $genrename = $fRow["genrename"];
+<div class="container">
+<form action="insert.php">
+   <div class="row">
+      <div class="col">
+         <input type="text" class="form-control" placeholder="Game Name" name="gamename">
+      </div>
 
-            echo "<tr><td>$id</td><td>$gamename</td><td>$genrename</td></tr>";
-         }
-      ?>
-   </tbody>
-</table>
+   <div class="col">
+      <select id="inputFood" class="form-control" name="genre">
+         <?php
+            $statement = $db->prepare("SELECT * FROM genres");
+            $statement->execute();
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+               $id   = $row['id'];
+               $genrename = $row['genrename'];
+               echo "<option value='$id'>$genrename</option>";
+            }
+            ?>
+      </select>
+   </div>
+   </div>
+   <input class="btn purple-gradient" type="submit" value="Submit">
+</form>
 
-<!-- <div class="container-fluid">
-   <form action="">
-      <input type="text">
-   </form>
-</div> -->
+<form action="profile.php">
+   <input type="submit" class="btn peach-gradient" value="Cancel">
+</form>
 
+</div>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>
