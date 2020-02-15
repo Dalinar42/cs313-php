@@ -28,7 +28,7 @@
 
 <div class="container">
    <table class="table table-bordered mb-3">
-      <thead class="tempting-azure-gradient">
+      <thead class="deep-blue-gradient">
          <tr>
             <th scope="col">Name</th>
             <th scope="col">Genre</th>
