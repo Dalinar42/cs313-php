@@ -28,7 +28,7 @@
 
 <div class="container">
    <table class="table table-bordered mb-5">
-      <thead class="thead-dark">
+      <thead class="purple-gradient">
          <tr>
             <th scope="col">Name</th>
             <th scope="col">Genre</th>
