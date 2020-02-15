@@ -6,11 +6,11 @@ session_start();
 $gamename = $_POST['gamename'];
 $genreid = $_POST['genreid'];
 $userIdSession = $_SESSION['userId'];
-$dateadded = date("Y/m/d");
-echo $gamename;
-echo $genreid;
-echo $userIdSession;
-echo $dateadded;
+$dateadded = date("m/d/Y");
+echo "Game name: " . $gamename;
+echo " Genre Id: " . $genreid;
+echo " User Id: " . $userIdSession;
+echo "Date Added: " . $dateadded;
 require("dbConnect.php");
 $db = get_db();
 
