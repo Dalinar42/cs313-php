@@ -3,25 +3,25 @@ session_start();
 
 // INSERT INTO game_list ( gamename, genreid, userid, dateadded)
 // 	VALUES ( 'StarCraft', 1, 1, '2/8/2020' );
-$gamename = $_POST['gamename'];
-$genreid = $_POST['genreid'];
+$gname = $_POST['gamename'];
+$grid = $_POST['genreid'];
 $id = $_SESSION['userid'];
-$dateadded = date("m/d/Y");
-echo "Game name: " . $gamename;
-echo " Genre Id: " . $genreid;
+$dateadd = date("m/d/Y");
+echo "Game name: " . $gname;
+echo " Genre Id: " . $grid;
 echo " User Id: " . $id;
-echo "Date Added: " . $dateadded;
+echo " Date Added: " . $dateadd;
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gamename, :genreid, :id, :dateadded)';
+	$query = 'INSERT INTO game_list ( gamename, genreid, userid, dateadded) VALUES (:gname, :grid, :id, :dateadd)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':gamename', $gamename);
-	$statement->bindValue(':genreid', $genreid);
+	$statement->bindValue(':gname', $gname);
+	$statement->bindValue(':grid', $grid);
 	$statement->bindValue(':id', $id);
-	$statement->bindValue(':dateadded', $dateadded);
+	$statement->bindValue(':dateadd', $dateadd);
 	$statement->execute();
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
