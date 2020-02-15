@@ -1,4 +1,5 @@
 <?php
+   session_start();
    require 'dbConnect.php';
    $db = getDb();
 ?>
@@ -19,7 +20,8 @@
 <body>
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
-      <h1>Hello, </h1>
+      <!-- I want to be able to greet them by username -->
+      <h1>Hello,</h1>
       <h3>Welcome to your homepage</h3>
    </div>
 </header>
@@ -33,10 +35,10 @@
    </thead>
    <tbody>
       <?php
-         $userid = 1;
-         $event = $db->prepare("SELECT DISTINCT g.id, g.gamename FROM game_list g JOIN users u ON u.id = g.userid WHERE u.id = $userid");
-         $event->execute();
-         while ($fRow = $event->fetch(PDO::FETCH_ASSOC))
+         $id = $_SESSION['userid'];
+         $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename FROM game_list g JOIN users u ON u.id = g.userid WHERE u.id = id");
+         $listGames->execute();
+         while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
          {
             $gamename = $fRow["gamename"];
             $id = $fRow['id'];

@@ -1,4 +1,5 @@
 <?php
+   session_start();
    require 'dbConnect.php';
    $db = getDb();
 ?>
@@ -22,10 +23,9 @@
       <h1>Video Game Tracker</h1>
       <h3>Add it once and keep track forever</h3>
    </div>
-
 </header>
 
-<form class="container" action="login.php">
+<form class="container" action="authenticate.php">
    <button class="btn btn-primary">Login</button>
 </form>
 

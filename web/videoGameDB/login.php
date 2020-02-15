@@ -30,7 +30,7 @@
 </header>
 
    <div class="container">
-      <form action="profile.php" method="post">
+      <form action="authenticate.php" method="post">
          <div class="form-row">
             <div class="col">
                <input class="form-control" type="email" name="email" placeholder="Enter email">
