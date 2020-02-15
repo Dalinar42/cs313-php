@@ -34,7 +34,7 @@ catch (Exception $ex)
 	die();
 }
 // header("Location: display.php/?personId=$userid");
-header("Location: profile.php");
+header("Location: profile.php/?personId=$id");
 
 die();
 ?>
