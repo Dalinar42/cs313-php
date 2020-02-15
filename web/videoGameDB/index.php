@@ -25,8 +25,12 @@
    </div>
 </header>
 
-<form class="container" action="login.php">
+<form class="container" action="login.php" style="float:left">
    <button class="btn blue-gradient">Login</button>
+</form>
+
+<form class="container" action="signUp.php">
+   <button class="btn blue-gradient">Sign Up</button>
 </form>
 
 <footer class="footer">

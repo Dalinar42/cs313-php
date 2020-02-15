@@ -11,4 +11,4 @@ ORDER BY g.gamename;
 
 \echo 'Show all games for one user'
 SELECT * FROM game_list
-WHERE userid = 2;
+WHERE userid = 1;
