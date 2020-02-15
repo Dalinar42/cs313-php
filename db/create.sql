@@ -5,7 +5,7 @@ CREATE TABLE users
 , lastname    VARCHAR (50)
 , phone       VARCHAR (100)
 , email       VARCHAR (100) NOT NULL
-, infohidden  VARCHAR (1)   NOT NULL
+, infohidden  BOOLEAN       NOT NULL
 );
 
 CREATE TABLE genres

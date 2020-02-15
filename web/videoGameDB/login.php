@@ -1,3 +1,7 @@
+<?php
+   require 'dbConnect.php';
+   $db = getDb();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,41 +19,35 @@
    <link rel="stylesheet" id="contact-form-7-css" href="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6" type="text/css" media="all">
    <link rel="stylesheet" id="wsl-widget-css" href="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/wordpress-social-login/assets/css/style.css?ver=5.3.2" type="text/css" media="all"> -->
    <link rel="stylesheet" id="compiled.css-css" href="https://z9t4u9f6.stackpathcdn.com/wp-content/themes/mdbootstrap4/css/compiled-4.12.0.min.css?ver=4.12.0" type="text/css" media="all">
-   <link rel="stylesheet" href="/index.css">
+   <link rel="stylesheet" href="../index.css">
 </head>
 <body>
 <header>
-   <?php
-      require 'dbConnect.php';
-      $db = getDb();
-   ?>
-   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
+   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white">
       <h1>Hello!</h1>
       <h3>Welcome to your videogame database</h3>
    </div>
-
 </header>
 
-<div class="container">
-   <form action="" method="post">
-      <div class="form-row">
-         <div class="col">
-            <input class="form-control" type="email" name="email" placeholder="Enter email">
-         </div>
-         <div class="col">
-            <input class="form-control" type="password" name="password" placeholder="Enter password">
-         </div>
+   <div class="container">
+      <form action="profile.php" method="post">
+         <div class="form-row">
+            <div class="col">
+               <input class="form-control" type="email" name="email" placeholder="Enter email">
+            </div>
+            <div class="col">
+               <input class="form-control" type="password" name="password" placeholder="Enter password">
+            </div>
 
-         <div class="col">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col">
+               <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
          </div>
-      </div>
-   </form>
-</div>
+      </form>
+   </div>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>
 </footer>
 </body>
 </html>
-
