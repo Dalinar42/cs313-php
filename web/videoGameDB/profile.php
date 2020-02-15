@@ -23,8 +23,10 @@
       <!-- I want to be able to greet them by user name -->
       <?php
          $id = $_SESSION['userid'];
-         $username = $db->prepare("SELECT username FROM users WHERE id = $id");
-         $username->execute();
+         $getUsername = $db->prepare("SELECT username FROM users WHERE id = $id");
+         $getUsername->execute();
+         $uRow = $listGames->fetch(PDO::FETCH_ASSOC);
+         $username = $uRow['username'];
       ?>
       <h1>Hello, <?php echo $username; ?></h1>
       <h3>Welcome to your game list</h3>
