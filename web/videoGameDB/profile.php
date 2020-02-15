@@ -21,7 +21,12 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <!-- I want to be able to greet them by user name -->
-      <h1>Hello, </h1>
+      <?php
+         $id = $_SESSION['userid'];
+         $username = $db->prepare("SELECT username FROM users WHERE id = $id");
+         $username->execute();
+      ?>
+      <h1>Hello, <?php echo $username; ?></h1>
       <h3>Welcome to your game list</h3>
    </div>
 </header>
@@ -37,7 +42,6 @@
       </thead>
       <tbody>
          <?php
-            $id = $_SESSION['userid'];
             $listGames = $db->prepare("SELECT DISTINCT g.gamename, gn.genrename, g.dateadded FROM game_list g
                                        JOIN users u ON u.id = g.userid
                                        JOIN genres gn ON gn.id = g.genreid
