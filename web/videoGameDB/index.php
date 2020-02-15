@@ -25,13 +25,14 @@
    </div>
 </header>
 
-<form class="container" action="login.php" style="float:left">
-   <button class="btn blue-gradient">Login</button>
-</form>
-
-<form class="container" action="signUp.php">
-   <button class="btn blue-gradient">Sign Up</button>
-</form>
+<div class="container">
+   <form action="login.php" style="float:left">
+      <button class="btn blue-gradient">Login</button>
+   </form>
+   <form action="signUp.php">
+      <button class="btn blue-gradient">Sign Up</button>
+   </form>
+</div>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>

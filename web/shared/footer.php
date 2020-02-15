@@ -11,7 +11,7 @@
          CS 313 Section 01
       </div>
       <div class="col text-right">
-         Austin Nelson
+      <a href="https://shrouded-retreat-30720.herokuapp.com/" class="text-white">Austin Nelson</a>
       </div>
    </div>
 </div>
