@@ -19,7 +19,7 @@
 </head>
 <body>
 <header>
-   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white">
+   <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <!-- I want to be able to greet them by username -->
       <h1>Hello, </h1>
       <h3>Welcome to your game list</h3>
@@ -27,8 +27,8 @@
 </header>
 
 <div class="container">
-   <table class="table table-bordered mb-5">
-      <thead class="purple-gradient">
+   <table class="table table-bordered mb-3">
+      <thead class="winter-neva-gradient">
          <tr>
             <th scope="col">Name</th>
             <th scope="col">Genre</th>
