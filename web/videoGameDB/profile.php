@@ -30,28 +30,28 @@
    <table class="table table-bordered mb-5">
       <thead class="thead-dark">
          <tr>
-            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Genre</th>
+            <th scope="col">Date Added</th>
          </tr>
       </thead>
       <tbody>
          <?php
             $id = $_SESSION['userid'];
-            $listGames = $db->prepare("SELECT DISTINCT g.id, g.gamename, gn.genrename, g.dateadded FROM game_list g
+            $listGames = $db->prepare("SELECT DISTINCT g.gamename, gn.genrename, g.dateadded FROM game_list g
                                        JOIN users u ON u.id = g.userid
                                        JOIN genres gn ON gn.id = g.genreid
-                                       WHERE u.id = $id;
+                                       WHERE u.id = $id
+                                       ORDER BY g.gamename;
                                        ");
             $listGames->execute();
             while ($fRow = $listGames->fetch(PDO::FETCH_ASSOC))
             {
                $gamename = $fRow["gamename"];
-               $id = $fRow['id'];
                $genrename = $fRow["genrename"];
                $dateadded = $fRow["dateadded"];
 
-               echo "<tr><td>$id</td><td>$gamename</td><td>$genrename</td><td>$dateadded</td></tr>";
+               echo "<tr><td>$gamename</td><td>$genrename</td><td>$dateadded</td></tr>";
             }
          ?>
       </tbody>
