@@ -33,7 +33,8 @@
    </thead>
    <tbody>
       <?php
-         $event = $db->prepare("SELECT * FROM game_list");
+         $userid = 1;
+         $event = $db->prepare("SELECT DISTINCT g.id, g.gamename FROM game_list g JOIN users u ON u.id = g.userid WHERE u.id = $userid");
          $event->execute();
          while ($fRow = $event->fetch(PDO::FETCH_ASSOC))
          {
