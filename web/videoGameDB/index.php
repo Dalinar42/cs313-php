@@ -25,9 +25,9 @@
 
 </header>
 
-   <div class="container">
-         <button class="btn btn-primary" action="login.php">Login</button>
-   </div>
+<form action="login.php">
+   <button class="btn btn-primary" action="login.php">Login</button>
+</form>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>
