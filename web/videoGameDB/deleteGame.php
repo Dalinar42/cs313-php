@@ -32,7 +32,7 @@
    <div class="col">
       <select id="genre" class="form-control" name="gameid">
          <?php
-            $userId = $_SESSION['userId'];
+            $userId = $_SESSION['userid'];
             $statement = $db->prepare("SELECT * FROM game_list WHERE userid = $userId");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
