@@ -37,7 +37,7 @@
       </tr>
       <tr>
          <th scope="row">2</th>
-         <td><a href="../videoGameDB/index.php" class="text-secondary">Project</a></td>
+         <td><a href="../videoGameDB/" class="text-secondary">Project</a></td>
          <td>2/8/2020</td>
       </tr>
    </tbody>

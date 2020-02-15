@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-secondary">
+<nav class="navbar navbar-expand-lg bg-secondary mb-5">
    <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
          <li class="nav-item active">

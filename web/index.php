@@ -11,9 +11,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-
 <header>
    <div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
       <h1>Austin Nelson</h1>
@@ -31,8 +29,7 @@
       <h4 class="col text-center">Assignments</h4>
    </div>
 
-   <div
-    class="row p-3">
+   <div class="row p-3">
       <div class="col p-3">
          <div class="float-left pr-3 pt-2">
             <img src="../Images/Family and Me/Me.jpg" class="rounded" alt="picture of me">
