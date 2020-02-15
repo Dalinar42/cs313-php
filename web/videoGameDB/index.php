@@ -25,8 +25,8 @@
 
 </header>
 
-<form action="login.php">
-   <button class="btn btn-primary" action="login.php">Login</button>
+<form class="container" action="login.php">
+   <button class="btn btn-primary">Login</button>
 </form>
 
 <footer class="footer">
