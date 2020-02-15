@@ -23,6 +23,7 @@ try
 	$statement->bindValue(':id', $id);
 	$statement->bindValue(':datetoday', $datetoday);
 	$statement->execute();
+	echo "Does it break here?";
 
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
@@ -30,11 +31,15 @@ try
 }
 catch (Exception $ex)
 {
+	echo "What about here?";
 	echo "Error with DB. Details: $ex";
 	die();
+	echo "Does it die in the catch?";
 }
-// header("Location: display.php/?personId=$userid");
+// header("Location: display.php/?personId=$userId");
 header("Location: profile.php/?personId=$id");
+
+echo "Do we get past the redirect?";
 
 die();
 ?>
