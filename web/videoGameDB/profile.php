@@ -55,12 +55,9 @@
    </tbody>
 </table>
 
-<!-- <div class="container-fluid">
-   <form action="">
-      <input type="text">
-   </form>
-</div> -->
-
+<form action="addGame.php">
+   <input type="submit" class="btn blue-gradient" value="Add Game">
+</form>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>
