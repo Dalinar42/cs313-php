@@ -30,7 +30,7 @@
 <form action="remove.php" method="post">
 
    <div class="col">
-      <select id="genre" class="form-control" name="genreid">
+      <select id="genre" class="form-control" name="gameid">
          <?php
             $statement = $db->prepare("SELECT * FROM game_list");
             $statement->execute();

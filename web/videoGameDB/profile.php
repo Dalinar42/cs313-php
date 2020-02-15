@@ -60,7 +60,7 @@
    <form action="addGame.php" style="float:left">
       <input type="submit" class="btn blue-gradient" value="Add Game">
    </form>
-   <form action="delete.php">
+   <form action="deleteGame.php">
       <input type="submit" class="btn blue-gradient" value="Remove Game">
    </form>
 </div>
