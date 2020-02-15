@@ -25,7 +25,7 @@
          $id = $_SESSION['userid'];
          $getUsername = $db->prepare("SELECT username FROM users WHERE id = $id");
          $getUsername->execute();
-         $uRow = $listGames->fetch(PDO::FETCH_ASSOC);
+         $uRow = $getUsername->fetch(PDO::FETCH_ASSOC);
          $username = $uRow['username'];
       ?>
       <h1>Hello, <?php echo $username; ?></h1>
