@@ -25,7 +25,7 @@
    </div>
 </header>
 
-<form class="container" action="authenticate.php">
+<form class="container" action="login.php">
    <button class="btn btn-primary">Login</button>
 </form>
 

@@ -21,7 +21,7 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <!-- I want to be able to greet them by username -->
-      <h1>Hello,</h1>
+      <h1>Hello, </h1>
       <h3>Welcome to your homepage</h3>
    </div>
 </header>
