@@ -7,7 +7,10 @@ $gamename = $_POST['gamename'];
 $genreid = $_POST['genreid'];
 $userIdSession = $_SESSION['userId'];
 $dateadded = date("Y/m/d");
-
+echo $gamename;
+echo $genreid;
+echo userIdSession;
+echo dateadded;
 require("dbConnect.php");
 $db = get_db();
 
