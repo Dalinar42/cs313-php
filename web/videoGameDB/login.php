@@ -26,7 +26,7 @@
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <h1>Hello!</h1>
-      <h3>Welcome to your videogame database</h3>
+      <h3>Please sign in to your videogame database</h3>
    </div>
 </header>
 
