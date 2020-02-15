@@ -20,7 +20,7 @@
 <body>
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
-      <!-- I want to be able to greet them by username -->
+      <!-- I want to be able to greet them by user name -->
       <h1>Hello, </h1>
       <h3>Welcome to your game list</h3>
    </div>
