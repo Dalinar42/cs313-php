@@ -8,6 +8,7 @@ $url = 'login.php';
 $_SESSION['userID'] = "";
 $_SESSION['errorStr'] = "";
 
+
 $name = $_POST['firstname'];
 $pass = $_POST['pass'];
 
@@ -17,7 +18,6 @@ $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 
 if (!isset($row['id'])) {
-   $_SESSION['errorStr'] = "killed in the user verification";
    header('Location: ' . $url);
    die();
 }
@@ -33,8 +33,7 @@ if (password_verify($pass, $passwordHash)) {
    $url = 'success.php';
 }
 
-$_SESSION['errorStr'] = "killed in the password verification";
-//header('Location: ' . $url);
-//die();
+header('Location: ' . $url);
+die();
 
 ?>

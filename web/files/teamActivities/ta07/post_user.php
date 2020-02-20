@@ -9,11 +9,11 @@
 
    echo "username = $name\n";
    echo "pass = $pass\n";
-   echo password_hash($name, PASSWORD_DEFAULT);
+   $hash =  password_hash($name, PASSWORD_DEFAULT);
 
-   $statement = $db->prepare("INSERT INTO ta07_user (username, userpassword) VALUES(:name, :pass)");
+   $statement = $db->prepare("INSERT INTO ta07_user (username, userpassword) VALUES(:name, :hash)");
    $statement->bindValue(':name', $name);
-   $statement->bindValue(':pass', $pass);
+   $statement->bindValue(':hash', $hash);
    $statement->execute();
 
    header('Location: ' . $url);
