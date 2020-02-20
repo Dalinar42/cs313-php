@@ -17,9 +17,10 @@
    $retrieveStatement->execute();
 
    $row = $retrieveStatement->fetch(PDO::FETCH_ASSOC);
-   if (!isset($row['username'])) {
+   if (isset($row['username'])) {
       $_SESSION['errorStr'] = "Username already taken";
-      header('Location: signUp.php');
+      $url = 'signUp.php';
+      header('Location: ' . $url);
       die();
    }
 
