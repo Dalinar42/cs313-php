@@ -24,7 +24,8 @@ if (!isset($row['id'])) {
 
 $passwordHash = $row['userpassword'];
 
-
+echo "verification: " . password_verify($pass, $passwordHash) . "<br>";
+echo "PASSWORD HASH: " . $passwordHash;
 if (password_verify($pass, $passwordHash)) {
    // Correct Password
 
@@ -33,7 +34,7 @@ if (password_verify($pass, $passwordHash)) {
 }
 
 $_SESSION['errorStr'] = "killed in the password verification";
-header('Location: ' . $url);
-die();
+//header('Location: ' . $url);
+//die();
 
 ?>
