@@ -11,6 +11,14 @@
    <title>Login! (not evil) >:)</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
+<script>
+
+function new_user() {
+   window.location.replace('signUp.php');
+}
+
+</script>
 <body>
 
 <form action="success.php">
@@ -21,6 +29,8 @@
 
     <input type="submit" name="log_in" value="Log In"><br><br>
 </form>
+
+<input type="button" name="new_user" value="Create New User" onclick="new_user()"><br><br>
 
 </body>
 </html>
