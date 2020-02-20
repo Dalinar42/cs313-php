@@ -19,7 +19,7 @@
    $row = $statement->fetch(PDO::FETCH_ASSOC);
    if (!isset($row['username'])) {
       $_SESSION['errorStr'] = "Username already taken";
-      header('Location: signUp.php');
+      header('Location: login.php');
       die();
    }
 
