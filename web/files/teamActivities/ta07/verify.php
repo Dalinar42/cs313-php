@@ -17,6 +17,7 @@ $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 
 if (!isset($row['id'])) {
+   $_SESSION['errorStr'] = "killed in the user verification";
    header('Location: ' . $url);
    die();
 }
@@ -25,7 +26,8 @@ $passwordHash = $row['userpassword'];
 
 
 if (password_verify($pass, $passwordHash)) {
-    // Correct Password
+   // Correct Password
+   $_SESSION['errorStr'] = "killed in the password verification";
 
    $_SESSION['userId'] = $row['id'];
    $url = 'success.php';

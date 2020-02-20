@@ -20,6 +20,7 @@ function new_user() {
 
 </script>
 <body>
+<h3><?php echo $_SESSION['errorStr']; ?></h3>
 
 <form action="verify.php" method="post">
     Username:<br>
