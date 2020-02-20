@@ -1,0 +1,26 @@
+<?php
+    session_start();
+    require 'dbconnect.php';
+    $db = get_db();
+?>
+
+<!DOCTYPE html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Login! (not evil) >:)</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<form action="success.php">
+    Username:<br>
+    <input type="text" name="firstname" id="first_name"><br>
+    Password:<br>
+    <input type="password" name="pass" id="id"><br><br>
+
+    <input type="submit" name="log_in" value="Log In"><br><br>
+</form>
+
+</body>
+</html>
