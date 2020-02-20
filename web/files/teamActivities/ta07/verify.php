@@ -33,6 +33,7 @@ if (password_verify($pass, $passwordHash)) {
    $url = 'success.php';
 }
 
+$_SESSION['errorStr'] = "killed in the password verification";
 header('Location: ' . $url);
 die();
 
