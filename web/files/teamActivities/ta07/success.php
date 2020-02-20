@@ -15,5 +15,6 @@
    </head>
    <body>
       <h1>You have made it into My Hero Academia</h1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRduRcm0Wd7F8WHuWFv3kjaXc9qc9DGXQbAAd0psoToouV6Q8jJ" alt="Smiley face">
    </body>
 </html>

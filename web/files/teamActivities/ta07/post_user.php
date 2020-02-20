@@ -14,7 +14,7 @@
 
    $retrieveStatement = $db->prepare("SELECT username FROM ta07_user WHERE username = :name");
    $retrieveStatement->bindValue(':name', $name);
-   $inserStatement->execute();
+   $retrieveStatement->execute();
 
    if ($statement->fetch(PDO::FETCH_ASSOC)) {
       $_SESSION['errorStr'] = "Username already taken";
