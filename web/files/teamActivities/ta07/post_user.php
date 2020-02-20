@@ -16,10 +16,10 @@
    $retrieveStatement->bindValue(':name', $name);
    $retrieveStatement->execute();
 
-   $row = $statement->fetch(PDO::FETCH_ASSOC);
+   $row = $retrieveStatement->fetch(PDO::FETCH_ASSOC);
    if (!isset($row['username'])) {
       $_SESSION['errorStr'] = "Username already taken";
-      header('Location: login.php');
+      header('Location: signUp.php');
       die();
    }
 
