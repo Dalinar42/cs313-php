@@ -21,11 +21,11 @@ function new_user() {
 </script>
 <body>
 
-<form action="success.php" method="post">
+<form action="verify.php" method="post">
     Username:<br>
-    <input type="text" name="firstname" id="first_name"><br>
+    <input type="text" name="firstname" id="firstname"><br>
     Password:<br>
-    <input type="password" name="pass" id="id"><br><br>
+    <input type="password" name="pass" id="pass"><br><br>
 
     <input type="submit" name="log_in" value="Log In"><br><br>
 </form>
