@@ -7,10 +7,10 @@
    $pass = $_POST['pass'];
 
 
-   echo "username = $name\n";
-   echo "pass = $pass\n";
+   // echo "username = $name\n";
+   // echo "pass = $pass\n";
    $hash = password_hash($pass, PASSWORD_DEFAULT);
-   echo "hash = $hash\n";
+   // echo "hash = $hash\n";
 
    $statement = $db->prepare("INSERT INTO ta07_user (username, userpassword) VALUES(:name, :hash)");
    $statement->bindValue(':name', $name);
