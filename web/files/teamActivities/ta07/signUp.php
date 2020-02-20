@@ -21,9 +21,9 @@ function new_user() {
 </script>
 <body>
 
-<form action="post_user.php">
+<form action="post_user.php" method="post">
     Username:<br>
-    <input type="text" name="firstname" id="firstname"><br>
+    <input type="text" name="username" id="username"><br>
     Password:<br>
     <input type="password" name="pass" id="pass"><br><br>
 

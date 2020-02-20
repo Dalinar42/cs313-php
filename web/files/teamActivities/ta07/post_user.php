@@ -10,6 +10,7 @@
 
     echo 'username = $name';
     echo '$pass = $pass';
+    echo password_hash($name, PASSWORD_DEFAULT);
 
     //check if all fill in:
 
