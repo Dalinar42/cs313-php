@@ -27,12 +27,12 @@ $passwordHash = $row['userpassword'];
 
 if (password_verify($pass, $passwordHash)) {
    // Correct Password
-   $_SESSION['errorStr'] = "killed in the password verification";
 
    $_SESSION['userId'] = $row['id'];
    $url = 'success.php';
 }
 
+$_SESSION['errorStr'] = "killed in the password verification";
 header('Location: ' . $url);
 die();
 
