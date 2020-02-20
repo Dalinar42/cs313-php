@@ -21,6 +21,8 @@ function new_user() {
 </script>
 <body>
 
+<h3><?php echo $_SESSION['errorStr']; ?></h3>
+
 <form action="post_user.php" method="post">
     Username:<br>
     <input type="text" name="username" id="username"><br>
