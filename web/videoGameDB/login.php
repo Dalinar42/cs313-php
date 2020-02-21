@@ -48,7 +48,7 @@ function new_user() {
             <input class="form-control" type="password" name="password" placeholder="Enter password" required>
          </div>
 
-         <div class="col float-left">
+         <div class="col">
             <button type="submit" class="btn blue-gradient">Login</button>
          </div>
          <form class="col" action="signUp.php">
