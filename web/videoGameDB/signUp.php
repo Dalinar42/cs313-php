@@ -73,21 +73,21 @@
 
 <div class="container">
    <form action="addUser.php" method="post" onsubmit="return checkForm(this);>
-   <div class="form-row">
-      <input class="form-control" type="email" name="email" placeholder="Enter email" required>
-   </div>
-   <div class="form-row">
-      <input class="form-control" type="password" name="password" placeholder="Enter password" required>
-   </div>
-   <div class="form-row">
-      <input class="form-control" type="password" name="password2" placeholder="Enter password" required>
-   </div>
-   <div class="form-row">
-      <input class="form-control" type="text" name="username" placeholder="Create a username" required>
-   </div>
-   <div class="form-row">
-      <input type="submit" name="create" value="Create"><br><br>
-   <div>
+      <div class="form-row">
+         <input class="form-control" type="email" name="email" placeholder="Enter email" required>
+      </div>
+      <div class="form-row">
+         <input class="form-control" type="password" name="password" placeholder="Enter password" required>
+      </div>
+      <div class="form-row">
+         <input class="form-control" type="password" name="password2" placeholder="Enter password" required>
+      </div>
+      <div class="form-row">
+         <input class="form-control" type="text" name="username" placeholder="Create a username" required>
+      </div>
+      <div class="form-row">
+         <input type="submit" name="create" value="Create"><br><br>
+      </div>
    </form>
 </div>
 
