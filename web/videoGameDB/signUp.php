@@ -67,7 +67,7 @@
 
 <div class="container">
    <form action="addUser.php" method="post" onsubmit="return checkForm(this);">
-      <div class="form-row">
+      <div class="form-row mb-3">
          <div class="col">
            <label for="email">Email</label>
          </div>
@@ -75,7 +75,7 @@
             <input class="form-control" type="email" name="email" placeholder="Email" required>
          </div>
       </div>
-      <div class="form-row">
+      <div class="form-row mb-3">
          <div class="col">
            <label for="Password">Password</label>
          </div>
@@ -83,7 +83,7 @@
             <input class="form-control" type="password" name="password" placeholder="Password" required>
          </div>
       </div>
-      <div class="form-row">
+      <div class="form-row mb-3">
          <div class="col">
            <label for="Confirm Password">Confirm Password</label>
          </div>
@@ -91,7 +91,7 @@
             <input class="form-control" type="password" name="password2" placeholder="Confirm password" required>
          </div>
       </div>
-      <div class="form-row">
+      <div class="form-row mb-3">
          <div class="col">
            <label for="Username">Username</label>
          </div>
@@ -99,7 +99,7 @@
             <input class="form-control" type="text" name="username" placeholder="Username" required>
          </div>
       </div>
-      <div class="form-row">
+      <div class="form-row mb-3">
          <div class="col">
             <input class="btn blue-gradient" type="submit" name="create" value="Create"><br><br>
          </div>
