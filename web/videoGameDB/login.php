@@ -51,10 +51,10 @@ function new_user() {
          <div class="col float-left">
             <button type="submit" class="btn blue-gradient">Login</button>
          </div>
+         <form action="signUp.php">
+            <button type="submit" class="btn blue-gradient">Sign Up</button>
+         </form>
       </div>
-   </form>
-   <form action="signUp.php">
-      <button type="submit" class="btn blue-gradient">Sign Up</button>
    </form>
 </div>
 
