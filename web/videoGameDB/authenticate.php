@@ -9,31 +9,28 @@ $_SESSION['userID'] = "";
 $_SESSION['errorStr'] = "";
 
 
-$name = $_POST['firstname'];
-$pass = $_POST['pass'];
+$email = $_POST['email'];
+$password = $_POST['pass'];
 
-$statement = $db->prepare("SELECT id, userpassword FROM ta07_user WHERE username = :name");
-$statement->bindValue(':name', $name);
-$statement->execute();
-$row = $statement->fetch(PDO::FETCH_ASSOC);
+$retrievePassword = $db->prepare("SELECT id, userpassword FROM users WHERE email = :email");
+$retrievePassword->bindValue(':email', $email);
+$retrievePassword->execute();
+$row = $retrievePassword->fetch(PDO::FETCH_ASSOC);
 
 if (!isset($row['id'])) {
+   $_SESSION['errorStr'] = "No such user";
    header('Location: ' . $url);
    die();
 }
 
 $passwordHash = $row['userpassword'];
 
-echo "verification: " . password_verify($pass, $passwordHash) . "<br>";
-echo "PASSWORD HASH: " . $passwordHash;
-if (password_verify($pass, $passwordHash)) {
-   // Correct Password
+if (password_verify($password, $passwordHash)) {
 
    $_SESSION['userId'] = $row['id'];
    $url = 'success.php';
 }
 
-$_SESSION['errorStr'] = "killed in the password verification";
 header('Location: ' . $url);
 die();
 
