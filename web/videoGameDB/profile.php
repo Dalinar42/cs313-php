@@ -35,7 +35,7 @@
 
 <div class="container">
    <table class="table table-bordered mb-3">
-      <thead class="deep-blue-gradient">
+      <thead class="blue">
          <tr>
             <th scope="col">Name</th>
             <th scope="col">Genre</th>

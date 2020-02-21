@@ -2,6 +2,7 @@
    session_start();
    require 'dbConnect.php';
    $db = getDb();
+   $_SESSION['errorStr'] = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,13 @@
    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
+
+<script>
+function new_user() {
+   window.location.replace('signUp.php');
+}
+</script>
+
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
       <h1>Hello!</h1>
@@ -40,10 +48,13 @@
                <input class="form-control" type="password" name="password" placeholder="Enter password">
             </div>
 
-            <div class="col">
-               <button type="submit" class="btn blue-gradient">Submit</button>
+            <div class="col float-left">
+               <button type="submit" class="btn blue-gradient">Login</button>
             </div>
          </div>
+      </form>
+      <form action="signUp.php">
+         <button type="submit" class="btn blue-gradient">Sign Up</button>
       </form>
    </div>
 
