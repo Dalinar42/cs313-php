@@ -17,48 +17,42 @@
    <link rel="stylesheet" id="compiled.css-css" href="https://z9t4u9f6.stackpathcdn.com/wp-content/themes/mdbootstrap4/css/compiled-4.12.0.min.css?ver=4.12.0" type="text/css" media="all">
    <link rel="stylesheet" href="../index.css">
 </head>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
-  function checkForm(form)
-  {
-   //  if(form.username.value == "") {
-   //    alert("Error: Username cannot be blank!");
-   //    form.username.focus();
-   //    return false;
-   //  }
-    re = /^\w+$/;
-    if(!re.test(form.username.value)) {
-      alert("Error: Username must contain only letters, numbers and underscores!");
-      form.username.focus();
-      return false;
-    }
+   function checkForm(form)
+   {
+      testString = /^\w+$/;
+      if(!testString.test(form.username.value)) {
+         alert("Error: Username must contain only letters, numbers and underscores!");
+         form.username.focus();
+         return false;
+      }
+      if(form.password.value != "" && form.password.value == form.password2.value) {
+         if(form.password.value.length < 8) {
+            alert("Error: Password must contain at least eight characters!");
+            form.password.focus();
+            return false;
+         }
+         if(form.password.value == form.username.value) {
+            alert("Error: Password must be different from Username!");
+            form.password.focus();
+            return false;
+         }
+         testString = /[a-z]/;
+         if(!testString.test(form.password.value)) {
+            alert("Error: password must contain at least one lowercase letter (a-z)!");
+            form.password.focus();
+            return false;
+         }
+      } else {
+         alert("Passwords do not match");
+         form.password.focus();
+         return false;
+      }
+      return true;
+   }
 
-    if(form.password.value != "" && form.password.value == form.password2.value) {
-      if(form.password.value.length < 6) {
-        alert("Error: Password must contain at least six characters!");
-        form.password.focus();
-        return false;
-      }
-      if(form.password.value == form.username.value) {
-        alert("Error: Password must be different from Username!");
-        form.password.focus();
-        return false;
-      }
-      re = /[a-z]/;
-      if(!re.test(form.password.value)) {
-        alert("Error: password must contain at least one lowercase letter (a-z)!");
-        form.password.focus();
-        return false;
-      }
-    } else {
-      alert("Passwords do not match");
-      form.password.focus();
-      return false;
-    }
-    return true;
-  }
-
-</script> -->
+</script>
 
 <header>
    <div class="jumbotron jumbotron-fluid text-center blue-gradient text-white mb-5">
@@ -74,19 +68,41 @@
 <div class="container">
    <form action="addUser.php" method="post" onsubmit="return checkForm(this);">
       <div class="form-row">
-         <input class="form-control" type="email" name="email" placeholder="Enter email" required>
+         <div class="col">
+           <label for="email">Email</label>
+         </div>
+         <div class="col">
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
+         </div>
       </div>
       <div class="form-row">
-         <input class="form-control" type="password" name="password" placeholder="Enter password" required>
+         <div class="col">
+           <label for="Password">Password</label>
+         </div>
+         <div class="col">
+            <input class="form-control" type="password" name="password" placeholder="Password" required>
+         </div>
       </div>
       <div class="form-row">
-         <input class="form-control" type="password" name="password2" placeholder="Enter password" required>
+         <div class="col">
+           <label for="Confirm Password">Confirm Password</label>
+         </div>
+         <div class="col">
+            <input class="form-control" type="password" name="password2" placeholder="Confirm password" required>
+         </div>
       </div>
       <div class="form-row">
-         <input class="form-control" type="text" name="username" placeholder="Create a username" required>
+         <div class="col">
+           <label for="Username">Username</label>
+         </div>
+         <div class="col">
+            <input class="form-control" type="text" name="username" placeholder="Username" required>
+         </div>
       </div>
       <div class="form-row">
-         <input type="submit" name="create" value="Create"><br><br>
+         <div class="col">
+            <input class="btn blue-gradient" type="submit" name="create" value="Create"><br><br>
+         </div>
       </div>
    </form>
 </div>
