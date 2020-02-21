@@ -38,25 +38,25 @@ function new_user() {
    </div>
 </header>
 
-   <div class="container">
-      <form action="authenticate.php" method="post">
-         <div class="form-row">
-            <div class="col">
-               <input class="form-control" type="email" name="email" placeholder="Enter email" required>
-            </div>
-            <div class="col">
-               <input class="form-control" type="password" name="password" placeholder="Enter password" required>
-            </div>
-
-            <div class="col float-left">
-               <button type="submit" class="btn blue-gradient">Login</button>
-            </div>
+<div class="container">
+   <form action="authenticate.php" method="post">
+      <div class="form-row">
+         <div class="col">
+            <input class="form-control" type="email" name="email" placeholder="Enter email" required>
          </div>
-      </form>
-      <form action="signUp.php">
-         <button type="submit" class="btn blue-gradient">Sign Up</button>
-      </form>
-   </div>
+         <div class="col">
+            <input class="form-control" type="password" name="password" placeholder="Enter password" required>
+         </div>
+
+         <div class="col float-left">
+            <button type="submit" class="btn blue-gradient">Login</button>
+         </div>
+      </div>
+   </form>
+   <form action="signUp.php">
+      <button type="submit" class="btn blue-gradient">Sign Up</button>
+   </form>
+</div>
 
 <footer class="footer">
    <?php include '../shared/footer.php' ?>
