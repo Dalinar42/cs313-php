@@ -42,10 +42,10 @@ function new_user() {
       <form action="authenticate.php" method="post">
          <div class="form-row">
             <div class="col">
-               <input class="form-control" type="email" name="email" placeholder="Enter email">
+               <input class="form-control" type="email" name="email" placeholder="Enter email" required>
             </div>
             <div class="col">
-               <input class="form-control" type="password" name="password" placeholder="Enter password">
+               <input class="form-control" type="password" name="password" placeholder="Enter password" required>
             </div>
 
             <div class="col float-left">
