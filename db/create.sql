@@ -1,11 +1,7 @@
 CREATE TABLE users
 ( id           SERIAL        NOT NULL PRIMARY KEY
 , username     VARCHAR (50)  NOT NULL
-, firstname    VARCHAR (50)
-, lastname     VARCHAR (50)
-, phone        VARCHAR (100)
 , email        VARCHAR (100) NOT NULL
--- , infohidden   BOOLEAN       NOT NULL
 , userpassword VARCHAR (1000)  NOT NULL
 );
 
