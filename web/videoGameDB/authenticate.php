@@ -26,7 +26,6 @@ echo 3;
 
 if (!isset($userRow['id'])) {
    $_SESSION['errorStr'] = "No such user";
-   echo "No such user";
    header('Location: ' . $url);
    die();
 }
