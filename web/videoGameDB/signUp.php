@@ -99,15 +99,14 @@
             <input class="form-control" type="text" name="username" placeholder="Username" required>
          </div>
       </div>
-      <div class="form-row mb-3">
-         <div class="col">
-            <input class="btn blue-gradient" type="submit" name="create" value="Create"><br><br>
-         </div>
-      </div>
-      <span class="text-danger"> <?php echo $_SESSION['errorStr']; ?></span>
-      <?php $_SESSION['errorStr'] = ""; ?>
+      <input class="btn blue-gradient float-left" type="submit" name="create" value="Create"><br><br>
    </form>
-</div>
+   <form action="index.php">
+      <button type="submit" class="btn blue-gradient">Back</button>
+   </form>
+   <span class="text-danger"> <?php echo $_SESSION['errorStr']; ?></span>
+   <?php $_SESSION['errorStr'] = ""; ?>
+   </div>
 
 </body>
 </html>
