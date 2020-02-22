@@ -32,8 +32,8 @@
    <div class="col">
       <select id="genre" class="form-control" name="gameid">
          <?php
-            $userId = $_SESSION['userid'];
-            $statement = $db->prepare("SELECT * FROM game_list WHERE userid = $userId");
+            $userid = $_SESSION['userid'];
+            $statement = $db->prepare("SELECT * FROM game_list WHERE userid = $userid");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {

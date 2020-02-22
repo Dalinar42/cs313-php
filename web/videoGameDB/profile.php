@@ -23,7 +23,7 @@
       <!-- I want to be able to greet them by user name -->
       <?php echo 1; ?>
       <?php
-         $id = $_SESSION['userId'];
+         $id = $_SESSION['userid'];
          echo $id;
          $getUsername = $db->prepare("SELECT username FROM users WHERE id = $id");
          $getUsername->execute();

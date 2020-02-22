@@ -5,7 +5,7 @@ require 'dbConnect.php';
 $db = getDb();
 $url = 'login.php';
 
-$_SESSION['userId'] = "";
+$_SESSION['userid'] = "";
 $_SESSION['errorStr'] = "";
 
 $email = $_POST['email'];
@@ -25,7 +25,7 @@ if (!isset($userRow['id'])) {
 $passwordHash = $userRow['userpassword'];
 
 if (password_verify($password, $passwordHash)) {
-   $_SESSION['userId'] = $userRow['id'];
+   $_SESSION['userid'] = $userRow['id'];
    $url = 'profile.php';
 }
 
