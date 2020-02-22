@@ -63,7 +63,7 @@ function new_user() {
 
    <span class="text-danger"> <?php echo $_SESSION['errorStr']; ?></span>
    <?php $_SESSION['errorStr'] = ""; ?>
-   <span class="text-danger"> <?php echo $_SESSION['successStr']; ?></span>
+   <span class="text-success"> <?php echo $_SESSION['successStr']; ?></span>
    <?php $_SESSION['successStr'] = ""; ?>
 </div>
 
