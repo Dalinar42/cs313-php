@@ -8,10 +8,10 @@
    $email = $_POST['email'];
 
 
-   echo "username = $name\n";
-   echo "pass = $pass\n";
+   echo "username = $username\n";
+   echo "pass = $password\n";
    $hashpassword = password_hash($password, PASSWORD_DEFAULT);
-   echo "hash = $hash\n";
+   echo "hash = $hashpassword\n";
 
    $retrieveUsername = $db->prepare("SELECT username FROM users WHERE username = :username");
    $retrieveUsername->bindValue(':username', $username);
