@@ -56,7 +56,9 @@ function new_user() {
    <form action="signUp.php">
       <button type="submit" class="btn blue-gradient">Sign Up</button>
    </form>
-   <h3 class="text-danger"><?php echo $_SESSION['errorStr'] ?></h3>
+   <h3 class="text-danger"><?php echo $_SESSION['errorStr']; ?></h3>
+   <?php $_SESSION['errorStr'] = ""; ?>
+
 </div>
 
 <footer class="footer">
