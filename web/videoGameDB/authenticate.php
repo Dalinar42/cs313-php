@@ -5,7 +5,7 @@ require 'dbConnect.php';
 $db = getDb();
 $url = 'login.php';
 
-$_SESSION['userID'] = "";
+$_SESSION['userId'] = "";
 $_SESSION['errorStr'] = "";
 
 $email = $_POST['email'];
