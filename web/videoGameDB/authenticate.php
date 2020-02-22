@@ -26,9 +26,8 @@ if (!isset($userRow['id'])) {
 $passwordHash = $userRow['userpassword'];
 
 if (password_verify($password, $passwordHash)) {
-
    $_SESSION['userId'] = $userRow['id'];
-   $url = 'success.php';
+   $url = 'profile.php';
 }
 
 header('Location: ' . $url);
