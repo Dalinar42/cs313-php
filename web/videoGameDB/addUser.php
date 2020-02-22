@@ -4,14 +4,14 @@
    $db = getDb();
    $url = 'login.php';
    $username = $_POST['username'];
-   $userpassword = $_POST['password2'];
+   $password = $_POST['password2'];
    $email = $_POST['email'];
 
 
-   // echo "username = $name\n";
-   // echo "pass = $pass\n";
-   $hashpassword = password_hash($userpassword, PASSWORD_DEFAULT);
-   // echo "hash = $hash\n";
+   echo "username = $name\n";
+   echo "pass = $pass\n";
+   $hashpassword = password_hash($password, PASSWORD_DEFAULT);
+   echo "hash = $hash\n";
 
    $retrieveUsername = $db->prepare("SELECT username FROM users WHERE username = :username");
    $retrieveUsername->bindValue(':username', $username);
