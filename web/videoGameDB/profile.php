@@ -24,6 +24,7 @@
       <?php echo 1; ?>
       <?php
          $id = $_SESSION['userid'];
+         echo $id;
          $getUsername = $db->prepare("SELECT username FROM users WHERE id = $id");
          $getUsername->execute();
          $uRow = $getUsername->fetch(PDO::FETCH_ASSOC);
