@@ -105,6 +105,8 @@
    <span class="text-danger"> <?php echo $_SESSION['errorStr']; ?></span>
    <?php $_SESSION['errorStr'] = ""; ?>
    </div>
-
+<footer class="footer">
+   <?php include '../shared/footer.php' ?>
+</footer>
 </body>
 </html>
