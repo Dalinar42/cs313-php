@@ -104,6 +104,8 @@
             <input class="btn blue-gradient" type="submit" name="create" value="Create"><br><br>
          </div>
       </div>
+      <span class="text-danger"> <?php echo $_SESSION['errorStr']; ?></span>
+      <?php $_SESSION['errorStr'] = ""; ?>
    </form>
 </div>
 

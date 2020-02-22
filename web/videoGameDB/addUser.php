@@ -6,12 +6,10 @@
    $username = $_POST['username'];
    $password = $_POST['password2'];
    $email = $_POST['email'];
+   $_SESSION['successStr'] = "";
 
 
-   echo "username = $username\n";
-   echo "pass = $password\n";
    $hashpassword = password_hash($password, PASSWORD_DEFAULT);
-   echo "hash = $hashpassword\n";
 
    $retrieveUsername = $db->prepare("SELECT username FROM users WHERE username = :username");
    $retrieveUsername->bindValue(':username', $username);
@@ -42,6 +40,7 @@
    $insertUser->bindValue(':email', $email);
    $insertUser->bindValue(':hashpassword', $hashpassword);
    $insertUser->execute();
+   $_SESSION['successStr'] = "Success! Please log in!";
 
    header('Location: ' . $url);
    die();
