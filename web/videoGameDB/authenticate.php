@@ -17,7 +17,7 @@ $password = $_POST['password'];
 echo 2;
 
 
-$retrievePassword = $db->prepare("SELECT id, userpassword FROM users WHERE email = :email");
+$retrievePassword = $db->prepare("SELECT id, userpassword FROM users WHERE email = :email;");
 $retrievePassword->bindValue(':email', $email);
 $retrievePassword->execute();
 $userRow = $retrievePassword->fetch(PDO::FETCH_ASSOC);
