@@ -35,10 +35,10 @@
       die();
    }
    echo 4;
-   $insertUser = $db->prepare("INSERT INTO users (username, email, userpassword) VALUES(:username, :email, :hashpassword)");
+   $insertUser = $db->prepare("INSERT INTO users (username, email, userpassword) VALUES(:username, :email, :userpassword)");
    $insertUser->bindValue(':username', $username);
    $insertUser->bindValue(':email', $email);
-   $insertUser->bindValue(':hashpassword', $hashpassword);
+   $insertUser->bindValue(':userpassword', $hashpassword);
    $insertUser->execute();
    $_SESSION['successStr'] = "Success! Please log in!";
    echo 5;
