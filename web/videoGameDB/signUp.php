@@ -63,8 +63,6 @@
 
 <body>
 
-<h3><?php echo $_SESSION['errorStr']; ?></h3>
-
 <div class="container">
    <form action="addUser.php" method="post" onsubmit="return checkForm(this);">
       <div class="form-row mb-3">
