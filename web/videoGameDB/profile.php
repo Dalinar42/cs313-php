@@ -30,7 +30,6 @@
       ?>
       <h1>Hello, <?php echo $username; ?></h1>
       <h3>Welcome to your game list</h3>
-
    </div>
 </header>
 
@@ -64,11 +63,14 @@
       </tbody>
    </table>
 
-   <form action="addGame.php" style="float:left">
-      <input type="submit" class="btn blue-gradient" value="Add Game">
+   <form action="addGame.php">
+      <input type="submit" class="btn blue-gradient float-left" value="Add Game">
    </form>
    <form action="deleteGame.php">
-      <input type="submit" class="btn blue-gradient" value="Remove Game">
+      <input type="submit" class="btn blue-gradient float-left" value="Remove Game">
+   </form>
+   <form action="logout.php">
+      <input type="submit" class="btn blue-gradient float-left" value="Logout">
    </form>
 </div>
 
