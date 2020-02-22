@@ -10,24 +10,24 @@ $_SESSION['errorStr'] = "";
 
 
 $email = $_POST['email'];
-$password = $_POST['pass'];
+$password = $_POST['password'];
 
 $retrievePassword = $db->prepare("SELECT id, userpassword FROM users WHERE email = :email");
 $retrievePassword->bindValue(':email', $email);
 $retrievePassword->execute();
-$row = $retrievePassword->fetch(PDO::FETCH_ASSOC);
+$userRow = $retrievePassword->fetch(PDO::FETCH_ASSOC);
 
-if (!isset($row['id'])) {
+if (!isset($userRow['id'])) {
    $_SESSION['errorStr'] = "No such user";
    header('Location: ' . $url);
    die();
 }
 
-$passwordHash = $row['userpassword'];
+$passwordHash = $userRow['userpassword'];
 
 if (password_verify($password, $passwordHash)) {
 
-   $_SESSION['userId'] = $row['id'];
+   $_SESSION['userId'] = $userRow['id'];
    $url = 'success.php';
 }
 
