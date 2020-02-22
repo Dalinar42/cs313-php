@@ -5,7 +5,7 @@ CREATE TABLE users
 , lastname     VARCHAR (50)
 , phone        VARCHAR (100)
 , email        VARCHAR (100) NOT NULL
-, infohidden   BOOLEAN       NOT NULL
+-- , infohidden   BOOLEAN       NOT NULL
 , userpassword VARCHAR (59)  NOT NULL
 );
 
