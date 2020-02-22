@@ -99,7 +99,7 @@
             <input class="form-control" type="text" name="username" placeholder="Username" required>
          </div>
       </div>
-      <input class="btn blue-gradient float-left" type="submit" name="create" value="Create"><br><br>
+      <input class="btn blue-gradient float-left" type="submit" name="create" value="Create">
    </form>
    <form action="index.php">
       <button type="submit" class="btn blue-gradient">Back</button>
