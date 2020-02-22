@@ -1,6 +1,9 @@
 <?php
    session_start();
    require 'dbConnect.php';
+   if (!isset($_SESSION['userid'])) {
+      header("Location: login.php");
+   }
    $db = getDb();
 ?>
 
