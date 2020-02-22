@@ -19,6 +19,7 @@ $userRow = $retrievePassword->fetch(PDO::FETCH_ASSOC);
 
 if (!isset($userRow['id'])) {
    $_SESSION['errorStr'] = "No such user";
+   echo "No such user";
    header('Location: ' . $url);
    die();
 }
