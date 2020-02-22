@@ -2,7 +2,7 @@
    session_start();
    require 'dbConnect.php';
    $db = getDb();
-   $_SESSION['errorStr'] = "";
+   // $_SESSION['errorStr'] = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
