@@ -1,8 +1,9 @@
 <?php
 
 session_start();
-unset($_SESSION['userid']);
-unset($_SESSION['successStr']);
-unset($_SESSION['errorStr']);
+session_unset();
+session_abort();
+
+header("Location: index.php");
 
 ?>
