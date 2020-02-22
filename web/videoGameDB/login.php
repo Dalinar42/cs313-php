@@ -55,7 +55,7 @@ function new_user() {
    </form>
 
    <form action="signUp.php">
-      <button type="submit" class="btn blue-gradient">Sign Up</button>
+      <button type="submit" class="btn blue-gradient float-left">Sign Up</button>
    </form>
    <form action="index.php">
       <button type="submit" class="btn blue-gradient">Back</button>
